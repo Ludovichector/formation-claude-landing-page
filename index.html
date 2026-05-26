@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maîtriser Claude IA pour l'Entreprise — Formation avec Ludovic Hector OUEDRAOGO</title>
+<meta name="description" content="Formation pratique Claude IA — 3 séances pour automatiser vos tâches, rédiger des rapports, analyser des données et maîtriser l'IA en entreprise. À Ouagadougou, Cité Azimo de Tampouy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #050e2b;
+    --navy-mid: #0b1a40;
+    --navy-light: #112060;
+    --teal: #00d4aa;
+    --teal-dim: #00a884;
+    --gold: #f5c842;
+    --gold-dim: #c9a030;
+    --white: #ffffff;
+    --off-white: #e8edf8;
+    --text-muted: #8a9bc8;
+    --card-bg: rgba(255,255,255,0.04);
+    --card-border: rgba(255,255,255,0.08);
+    --glow-teal: 0 0 40px rgba(0,212,170,0.2);
+    --glow-gold: 0 0 40px rgba(245,200,66,0.2);
+    --radius: 16px;
+    --radius-sm: 8px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(0,212,170,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 80%, rgba(17,32,96,0.6) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 90% 20%, rgba(245,200,66,0.04) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .grid-bg {
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  * { position: relative; z-index: 1; }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: rgba(5,14,43,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--card-border);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .nav-logo .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--teal);
+    box-shadow: 0 0 12px var(--teal);
+  }
+
+  .nav-cta {
+    background: var(--teal);
+    color: var(--navy);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.2s;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .nav-cta:hover { background: var(--teal-dim); transform: translateY(-1px); }
+
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 7rem 2rem 4rem;
+  }
+
+  .badge-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(245,200,66,0.3);
+    padding: 7px 16px;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.8rem, 8vw, 6rem);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  h1 .line1 { display: block; color: var(--white); }
+  h1 .line2 {
+    display: block;
+    background: linear-gradient(90deg, var(--teal) 0%, #00f0c8 50%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  h1 .line3 { display: block; color: var(--off-white); font-size: 0.65em; font-weight: 700; }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin: 1.5rem auto 0;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 2rem 0 2.5rem;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    background: rgba(0,212,170,0.1);
+    border: 1px solid rgba(0,212,170,0.25);
+    color: var(--teal);
+    font-weight: 500;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--teal);
+    color: var(--navy);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.25s;
+    box-shadow: 0 8px 30px rgba(0,212,170,0.35);
+  }
+
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,212,170,0.5); background: #00efc0; }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--white);
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    transition: all 0.25s;
+  }
+
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+
+  .info-strip {
+    background: var(--navy-mid);
+    border-top: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
+    padding: 1.5rem 2rem;
+  }
+
+  .info-strip-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 3rem;
+  }
+
+  .info-item { display: flex; align-items: center; gap: 12px; }
+
+  .info-icon {
+    width: 42px; height: 42px;
+    border-radius: 10px;
+    background: rgba(245,200,66,0.1);
+    border: 1px solid rgba(245,200,66,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-icon svg { width: 20px; height: 20px; }
+
+  .info-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .info-value { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px; color: var(--gold); }
+
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1000px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    color: var(--text-muted);
+    max-width: 600px;
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .why-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: all 0.3s;
+  }
+
+  .why-card:hover {
+    border-color: rgba(0,212,170,0.3);
+    background: rgba(0,212,170,0.04);
+    transform: translateY(-4px);
+    box-shadow: var(--glow-teal);
+  }
+
+  .why-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: rgba(0,212,170,0.1);
+    border: 1px solid rgba(0,212,170,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .why-icon svg { width: 22px; height: 22px; }
+
+  .why-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+  }
+
+  .why-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+
+  .seances { display: flex; flex-direction: column; gap: 2rem; }
+
+  .seance-card {
+    border-radius: var(--radius);
+    border: 1px solid var(--card-border);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+  }
+
+  .seance-card:hover { box-shadow: 0 0 60px rgba(0,212,170,0.08); }
+
+  .seance-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .s1 .seance-header { background: linear-gradient(135deg, #1a1060, #0d1a50); }
+  .s2 .seance-header { background: linear-gradient(135deg, #0a2e1e, #0d2a1a); }
+  .s3 .seance-header { background: linear-gradient(135deg, #2e1a05, #2a1a08); }
+
+  .seance-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    opacity: 0.15;
+    flex-shrink: 0;
+  }
+
+  .seance-info { flex: 1; }
+
+  .seance-badge {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 50px;
+    margin-bottom: 6px;
+  }
+
+  .s1 .seance-badge { background: rgba(99,80,220,0.25); color: #a89ff8; }
+  .s2 .seance-badge { background: rgba(0,212,130,0.2); color: var(--teal); }
+  .s3 .seance-badge { background: rgba(245,200,66,0.2); color: var(--gold); }
+
+  .seance-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--white); }
+  .seance-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 3px; }
+
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1px;
+    background: var(--card-border);
+  }
+
+  .module-item {
+    background: var(--navy);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    transition: background 0.2s;
+  }
+
+  .module-item:hover { background: rgba(255,255,255,0.03); }
+
+  .module-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+
+  .s1 .module-dot { background: #7b6fee; }
+  .s2 .module-dot { background: var(--teal); }
+  .s3 .module-dot { background: var(--gold); }
+
+  .module-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .module-desc { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+
+  .formateur-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .formateur-photo { position: relative; }
+
+  .formateur-avatar {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
+    border: 2px solid rgba(0,212,170,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 800;
+    color: var(--teal);
+    max-width: 260px;
+    box-shadow: 0 0 60px rgba(0,212,170,0.15), 0 0 0 8px rgba(0,212,170,0.05);
+  }
+
+  .cert-badge {
+    position: absolute;
+    bottom: 10px; right: 10px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 700;
+    font-family: 'Syne', sans-serif;
+    padding: 6px 12px;
+    border-radius: 50px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .formateur-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .formateur-cred {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--teal);
+    background: rgba(0,212,170,0.1);
+    border: 1px solid rgba(0,212,170,0.2);
+    padding: 5px 12px;
+    border-radius: 50px;
+    margin-bottom: 1.25rem;
+  }
+
+  .formateur-bio {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .cred-tags { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .cred-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 50px;
+  }
+
+  .cred-tag svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+  .objectifs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .obj-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 1.25rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm);
+  }
+
+  .obj-check {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: rgba(0,212,170,0.15);
+    border: 1px solid rgba(0,212,170,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .obj-check svg { width: 12px; height: 12px; }
+  .obj-text { font-size: 0.9rem; color: var(--off-white); line-height: 1.5; }
+
+  .public-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .public-card {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    transition: all 0.3s;
+  }
+
+  .public-card:hover {
+    border-color: rgba(245,200,66,0.3);
+    transform: translateY(-4px);
+    box-shadow: var(--glow-gold);
+  }
+
+  .public-icon {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    background: rgba(245,200,66,0.1);
+    border: 1px solid rgba(245,200,66,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.75rem;
+  }
+
+  .public-icon svg { width: 26px; height: 26px; }
+
+  .public-label {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--white);
+  }
+
+  .cta-section {
+    background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-light) 50%, var(--navy-mid) 100%);
+    border-top: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
+    text-align: center;
+    padding: 5rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(0,212,170,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .cta-title span { color: var(--teal); }
+
+  .cta-desc {
+    color: var(--text-muted);
+    max-width: 520px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.05rem;
+  }
+
+  .cta-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 12px 40px rgba(245,200,66,0.4);
+    transition: all 0.25s;
+    margin-bottom: 1rem;
+  }
+
+  .cta-phone:hover { transform: translateY(-3px); box-shadow: 0 18px 50px rgba(245,200,66,0.55); }
+  .cta-phone svg { width: 26px; height: 26px; flex-shrink: 0; }
+
+  .cta-note { font-size: 0.85rem; color: var(--text-muted); display: block; }
+
+  footer {
+    background: rgba(0,0,0,0.3);
+    border-top: 1px solid var(--card-border);
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .footer-inner { max-width: 800px; margin: 0 auto; }
+
+  .footer-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .footer-logo span { color: var(--teal); }
+
+  .footer-text { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+
+  .footer-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+
+  .footer-contact svg { width: 13px; height: 13px; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse-teal {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(0,212,170,0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(0,212,170,0); }
+  }
+
+  .pulse { animation: pulse-teal 2.5s infinite; }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--card-border), transparent);
+    margin: 0 2rem;
+  }
+
+  @media (max-width: 700px) {
+    nav { padding: 0.75rem 1rem; }
+    section { padding: 3.5rem 1.25rem; }
+    .formateur-wrap { grid-template-columns: 1fr; }
+    .formateur-avatar { max-width: 180px; margin: 0 auto; }
+    .info-strip { padding: 1.25rem 1rem; }
+    .seance-header { padding: 1.25rem; }
+    .modules-grid { grid-template-columns: 1fr; }
+    .cta-phone { font-size: 1.1rem; padding: 16px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<!-- SVG SYMBOL DEFS -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="ico-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.12 1.23 2 2 0 012.11 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.46-.46a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+  </symbol>
+  <symbol id="ico-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+  </symbol>
+  <symbol id="ico-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+  </symbol>
+  <symbol id="ico-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+  </symbol>
+  <symbol id="ico-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+  </symbol>
+  <symbol id="ico-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+  </symbol>
+  <symbol id="ico-trending-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+  </symbol>
+  <symbol id="ico-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  </symbol>
+  <symbol id="ico-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+  </symbol>
+  <symbol id="ico-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="20 6 9 17 4 12"/>
+  </symbol>
+  <symbol id="ico-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+  </symbol>
+  <symbol id="ico-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/><line x1="2" y1="13" x2="22" y2="13"/>
+  </symbol>
+  <symbol id="ico-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+  </symbol>
+  <symbol id="ico-bar-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+  </symbol>
+  <symbol id="ico-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+  </symbol>
+  <symbol id="ico-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+  </symbol>
+  <symbol id="ico-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+  </symbol>
+  <symbol id="ico-graduation" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+  </symbol>
+  <symbol id="ico-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </symbol>
+  <symbol id="ico-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/>
+  </symbol>
+  <symbol id="ico-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>
+  </symbol>
+</svg>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span class="dot"></span>
+    Claude IA Formation
+  </a>
+  <a href="#inscription" class="nav-cta pulse">
+    <svg width="15" height="15"><use href="#ico-phone"/></svg>
+    Réserver ma place
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="badge-top">
+    <svg width="12" height="12"><use href="#ico-star"/></svg>
+    Formation certifiante · Ouagadougou 2026
+  </span>
+  <h1>
+    <span class="line1">Maîtriser</span>
+    <span class="line2">Claude IA</span>
+    <span class="line3">Pour l'Entreprise</span>
+  </h1>
+  <p class="hero-sub">
+    Automatisez vos tâches, rédigez mieux, analysez vos données et prenez l'avance sur l'IA — en seulement 3 séances intensives et pratiques.
+  </p>
+  <div class="hero-tags">
+    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-zap"/></svg> Automatisation</span>
+    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-cpu"/></svg> Rédaction professionnelle</span>
+    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-bar-chart"/></svg> Analyse de données</span>
+    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-target"/></svg> PowerPoint &amp; Rapports</span>
+    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-globe"/></svg> Veille IA</span>
+  </div>
+  <div class="hero-actions">
+    <a href="#inscription" class="btn-primary">
+      <svg width="17" height="17"><use href="#ico-phone"/></svg>
+      Réserver ma place
+    </a>
+    <a href="#programme" class="btn-secondary">
+      Voir le programme
+      <svg width="16" height="16"><use href="#ico-arrow-down"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <div class="info-strip-inner">
+    <div class="info-item">
+      <div class="info-icon">
+        <svg width="20" height="20" style="color:var(--gold)"><use href="#ico-calendar"/></svg>
+      </div>
+      <div>
+        <div class="info-label">Début</div>
+        <div class="info-value">Samedi 30 mai 2026</div>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">
+        <svg width="20" height="20" style="color:var(--gold)"><use href="#ico-clock"/></svg>
+      </div>
+      <div>
+        <div class="info-label">Durée</div>
+        <div class="info-value">3h par jour · 3 séances</div>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">
+        <svg width="20" height="20" style="color:var(--gold)"><use href="#ico-map-pin"/></svg>
+      </div>
+      <div>
+        <div class="info-label">Lieu</div>
+        <div class="info-value">Cité Azimo de Tampouy</div>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">
+        <svg width="20" height="20" style="color:var(--gold)"><use href="#ico-award"/></svg>
+      </div>
+      <div>
+        <div class="info-label">Format</div>
+        <div class="info-value">100% pratique &amp; utile</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- POURQUOI -->
+<section>
+  <div class="container">
+    <div class="section-label">Pourquoi cette formation ?</div>
+    <h2 class="section-title">Devenez plus efficace,<br>gagnez du temps, prenez de l'avance.</h2>
+    <p class="section-desc">L'IA n'est plus un luxe — c'est un outil quotidien. Ceux qui la maîtrisent travaillent deux fois plus vite, deux fois mieux.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" style="color:var(--teal)"><use href="#ico-rocket"/></svg>
+        </div>
+        <div class="why-title">Gagnez du temps</div>
+        <div class="why-desc">Automatisez les tâches répétitives et concentrez-vous sur ce qui compte vraiment dans votre entreprise.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" style="color:var(--teal)"><use href="#ico-trending-up"/></svg>
+        </div>
+        <div class="why-title">Boostez votre impact</div>
+        <div class="why-desc">Produisez des contenus professionnels plus rapidement et avec bien plus de qualité qu'auparavant.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" style="color:var(--teal)"><use href="#ico-shield"/></svg>
+        </div>
+        <div class="why-title">Prenez de l'avance</div>
+        <div class="why-desc">Maîtrisez les outils IA pour rester compétitif dans votre secteur face à une concurrence qui évolue vite.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" style="color:var(--teal)"><use href="#ico-target"/></svg>
+        </div>
+        <div class="why-title">100% applicable</div>
+        <div class="why-desc">Chaque module est conçu pour être appliqué immédiatement dans votre contexte professionnel réel.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMME -->
+<section id="programme" style="background: rgba(0,0,0,0.2);">
+  <div class="container">
+    <div class="section-label">Le programme</div>
+    <h2 class="section-title">Un parcours en 3 séances progressives</h2>
+    <p class="section-desc">De la découverte à la maîtrise avancée — chaque séance construit sur la précédente pour une montée en compétences rapide.</p>
+
+    <div class="seances">
+
+      <!-- SÉANCE 1 -->
+      <div class="seance-card s1">
+        <div class="seance-header">
+          <div class="seance-num">01</div>
+          <div class="seance-info">
+            <div class="seance-badge">Séance 1 · Fondamentaux</div>
+            <div class="seance-title">Comprendre &amp; prendre en main Claude IA</div>
+            <div class="seance-sub">Débutants &amp; initiés — Base solide pour bien démarrer</div>
+          </div>
+        </div>
+        <div class="modules-grid">
+          <div class="module-item">
+            <div class="module-dot"></div>
+            <div>
+              <div class="module-name">Module 1.1 — Qu'est-ce que l'IA générative ?</div>
+              <div class="module-desc">Comprendre comment fonctionne Claude, différences avec ChatGPT, Gemini. État actuel de l'IA en 2025-2026.</div>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-dot"></div>
+            <div>
+              <div class="module-name">Module 1.2 — Prise en main de Claude</div>
+              <div class="module-desc">Interface claude.ai, créer un compte, les différents plans. Premiers prompts en contexte professionnel.</div>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-dot"></div>
+            <div>
+              <div class="module-name">Module 1.3 — L'art du bon prompt</div>
+              <div class="module-desc">Techniques de prompting : contexte, rôle, format, exemples. Prompts pour la rédaction professionnelle, emails, comptes-rendus.</div>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-dot"></div>
+            <div>
+              <div class="module-name">Module 1.4 — Veille IA : rester à jour</div>
+              <div class="module-desc">Comment suivre les nouveautés IA sans se perdre. Sources fiables, newsletters, outils de veille recommandés.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SÉANCE 2 -->
+      <div class="seance-card s2">
+        <div class="seance-header">
+          <div class="seance-num">02</div>
+          <div class="seance-info">
+            <div class="seance-badge">Séance 2 · Pratique intensive</div>
+            <div class="seance-title">Automatiser les tâches et la production de contenus</div>
+            <div class="seance-sub">Cas concrets en entreprise — Applicable immédiatement</div>
+          </div>
+        </div>
+        <div class="modules-grid">
+          <div class="module-item">
+            <div class="module-dot"></div>
+            <div>
+              <div class="module-name">Module 2.1 — Créer des présentations PowerPoint</div>
+              <div class="module-desc">Générer un plan de slides, rédiger le contenu, structurer les messages clés. Utiliser Claude + PowerPoint efficacement.</div>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-dot"></div>
+            <div>
+              <div class="module-name">Module 2.2 — Rédiger des rapports professionnels</div>
+              <div class="module-desc">Rapports d'activité, synthèses exécutives, notes de service, comptes-rendus de réunion. Templates réutilisables.</div>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-dot"></div>
+            <div>
+              <div class="module-name">Module 2.3 — Analyser des données avec Claude</div>
+              <div class="module-desc">Importer des tableaux, interpréter des chiffres, produire des synthèses chiffrées. Analyse de fichiers Excel/CSV.</div>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-dot"></div>
+            <div>
+              <div class="module-name">Module 2.4 — Automatiser la communication écrite</div>
+              <div class="module-desc">Emails, propositions commerciales, appels d'offre, fiches produit. Adapter le ton selon l'interlocuteur.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SÉANCE 3 -->
+      <div class="seance-card s3">
+        <div class="seance-header">
+          <div class="seance-num">03</div>
+          <div class="seance-info">
+            <div class="seance-badge">Séance 3 · Stratégie &amp; avenir</div>
+            <div class="seance-title">Maîtriser l'IA et l'intégrer durablement</div>
+            <div class="seance-sub">Passer à l'échelle en entreprise — Vision long terme</div>
+          </div>
+        </div>
+        <div class="modules-grid">
+          <div class="module-item">
+            <div class="module-dot"></div>
+            <div>
+              <div class="module-name">Module 3.1 — Workflows IA dans l'entreprise</div>
+              <div class="module-desc">Identifier les tâches automatisables dans son poste, créer des processus répétables avec Claude. Gain de temps concret.</div>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-dot"></div>
+            <div>
+              <div class="module-name">Module 3.2 — Bonnes pratiques &amp; limites de l'IA</div>
+              <div class="module-desc">Vérification des contenus générés, confidentialité des données, risques à connaître. Utiliser l'IA de façon responsable.</div>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-dot"></div>
+            <div>
+              <div class="module-name">Module 3.3 — Tendances IA &amp; stratégie d'entreprise</div>
+              <div class="module-desc">IA agentique, automatisation avancée, outils complémentaires (Gemini, Copilot, Perplexity). Préparer son entreprise.</div>
+            </div>
+          </div>
+          <div class="module-item">
+            <div class="module-dot"></div>
+            <div>
+              <div class="module-name">Module 3.4 — Plan d'action personnel</div>
+              <div class="module-desc">Chaque participant repart avec son plan d'intégration IA : 3 tâches à automatiser dès la semaine suivante.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIFS -->
+<section>
+  <div class="container">
+    <div class="section-label">Objectifs concrets</div>
+    <h2 class="section-title">À la fin de la formation,<br>vous saurez exactement comment…</h2>
+    <div class="objectifs-grid">
+      <div class="obj-item">
+        <div class="obj-check"><svg style="color:var(--teal)"><use href="#ico-check"/></svg></div>
+        <div class="obj-text">Créer une présentation PowerPoint professionnelle en quelques minutes avec Claude</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-check"><svg style="color:var(--teal)"><use href="#ico-check"/></svg></div>
+        <div class="obj-text">Rédiger des rapports, emails et comptes-rendus de qualité supérieure sans effort</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-check"><svg style="color:var(--teal)"><use href="#ico-check"/></svg></div>
+        <div class="obj-text">Analyser des fichiers Excel et CSV pour en extraire des synthèses claires</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-check"><svg style="color:var(--teal)"><use href="#ico-check"/></svg></div>
+        <div class="obj-text">Formuler des prompts efficaces adaptés à votre métier et secteur d'activité</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-check"><svg style="color:var(--teal)"><use href="#ico-check"/></svg></div>
+        <div class="obj-text">Identifier et automatiser les 3 tâches qui vous font perdre le plus de temps</div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-check"><svg style="color:var(--teal)"><use href="#ico-check"/></svg></div>
+        <div class="obj-text">Rester informé des évolutions IA pour ne jamais prendre de retard</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLIC CIBLE -->
+<section style="background: rgba(0,0,0,0.2);">
+  <div class="container">
+    <div class="section-label">Pour qui ?</div>
+    <h2 class="section-title">Cette formation est faite pour vous si…</h2>
+    <div class="public-grid">
+      <div class="public-card">
+        <div class="public-icon"><svg style="color:var(--gold)"><use href="#ico-building"/></svg></div>
+        <div class="public-label">Dirigeants &amp; Entrepreneurs</div>
+      </div>
+      <div class="public-card">
+        <div class="public-icon"><svg style="color:var(--gold)"><use href="#ico-briefcase"/></svg></div>
+        <div class="public-label">Managers &amp; Cadres</div>
+      </div>
+      <div class="public-card">
+        <div class="public-icon"><svg style="color:var(--gold)"><use href="#ico-user"/></svg></div>
+        <div class="public-label">Assistants &amp; Secrétaires</div>
+      </div>
+      <div class="public-card">
+        <div class="public-icon"><svg style="color:var(--gold)"><use href="#ico-bar-chart"/></svg></div>
+        <div class="public-label">Analystes &amp; Chargés d'études</div>
+      </div>
+      <div class="public-card">
+        <div class="public-icon"><svg style="color:var(--gold)"><use href="#ico-target"/></svg></div>
+        <div class="public-label">Commerciaux &amp; Marketeurs</div>
+      </div>
+      <div class="public-card">
+        <div class="public-icon"><svg style="color:var(--gold)"><use href="#ico-users"/></svg></div>
+        <div class="public-label">Toute personne en entreprise</div>
+      </div>
+    </div>
+    <p style="text-align:center; color: var(--text-muted); font-size: 0.9rem; margin-top: 1.5rem;">Aucune connaissance préalable en informatique ou en IA n'est requise.</p>
+  </div>
+</section>
+
+<!-- FORMATEUR -->
+<section>
+  <div class="container">
+    <div class="section-label">Votre formateur</div>
+    <div class="formateur-wrap">
+      <div class="formateur-photo">
+        <div class="formateur-avatar">LHO</div>
+        <span class="cert-badge">
+          <svg width="11" height="11" style="color:var(--navy)"><use href="#ico-star"/></svg>
+          Claude 101 — Anthropic
+        </span>
+      </div>
+      <div>
+        <h2 class="formateur-name">Ludovic Hector OUEDRAOGO</h2>
+        <span class="formateur-cred">
+          <svg width="13" height="13"><use href="#ico-award"/></svg>
+          Certifié Claude 101 — Anthropic · Formateur IA
+        </span>
+        <p class="formateur-bio">
+          Ludovic Hector OUEDRAOGO est l'un des rares formateurs certifiés Claude 101 par Anthropic en Afrique de l'Ouest. Passionné par l'impact concret de l'intelligence artificielle en entreprise, il accompagne dirigeants, cadres et équipes à intégrer les outils IA dans leurs pratiques quotidiennes.
+        </p>
+        <p class="formateur-bio">
+          Sa pédagogie est résolument <strong style="color: var(--teal);">pratique</strong> : pas de théorie inutile, des exercices réels tirés du contexte professionnel burkinabè et africain. Vous repartez avec des compétences applicables dès le lendemain.
+        </p>
+        <div class="cred-tags">
+          <span class="cred-tag" style="color:var(--gold); background:rgba(245,200,66,0.1); border:1px solid rgba(245,200,66,0.2);">
+            <svg><use href="#ico-award"/></svg> Certifié Anthropic
+          </span>
+          <span class="cred-tag" style="color:var(--teal); background:rgba(0,212,170,0.1); border:1px solid rgba(0,212,170,0.2);">
+            <svg><use href="#ico-graduation"/></svg> Formateur IA
+          </span>
+          <span class="cred-tag" style="color:var(--text-muted); background:var(--card-bg); border:1px solid var(--card-border);">
+            <svg><use href="#ico-map-pin"/></svg> Ouagadougou
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="inscription">
+  <div class="container" style="position: relative; z-index: 2;">
+    <div class="section-label" style="color: var(--teal);">Réservez votre place</div>
+    <h2 class="cta-title">Prêt à transformer<br><span>votre façon de travailler</span> ?</h2>
+    <p class="cta-desc">
+      Les places sont limitées. Inscrivez-vous dès maintenant pour garantir votre participation à la formation du samedi 30 mai 2026.
+    </p>
+    <a href="tel:+22661400528" class="cta-phone">
+      <svg><use href="#ico-phone"/></svg>
+      +226 61 40 05 28
+    </a>
+    <br>
+    <span class="cta-note" style="margin-top: 0.75rem; display: block;">Appelez ou WhatsApp pour vous inscrire · Bureaux à la Cité Azimo de Tampouy, Ouagadougou</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <svg width="16" height="16" style="color:var(--teal)"><use href="#ico-cpu"/></svg>
+      Maîtriser <span>Claude IA</span> pour l'Entreprise
+    </div>
+    <p class="footer-text">
+      Formation animée par Ludovic Hector OUEDRAOGO · Certifié Claude 101 — Anthropic<br>
+      Cité Azimo de Tampouy, Ouagadougou, Burkina Faso
+    </p>
+    <div class="footer-contact">
+      <svg><use href="#ico-phone"/></svg>
+      +226 61 40 05 28
+    </div>
+    <p class="footer-text" style="margin-top:1rem;">© 2026 — Formation Claude IA pour l'Entreprise. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.style.opacity = '1';
+        el.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.why-card, .seance-card, .obj-item, .public-card, .module-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
