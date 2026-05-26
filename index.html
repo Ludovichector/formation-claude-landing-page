@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maîtriser Claude IA pour l'Entreprise — Formation avec Ludovic Hector OUEDRAOGO</title>
-<meta name="description" content="Formation pratique Claude IA — 3 séances pour automatiser vos tâches, rédiger des rapports, analyser des données et maîtriser l'IA en entreprise. À Ouagadougou, Cité Azimo de Tampouy.">
+<title>Maîtriser Claude IA pour l'Entreprise - Formation avec Ludovic Hector OUEDRAOGO</title>
+<meta name="description" content="Formation pratique Claude IA - 3 séances pour automatiser vos tâches, rédiger des rapports, analyser des données et maîtriser l'IA en entreprise. À Ouagadougou, Cité Azimo de Tampouy.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -705,6 +705,81 @@
     .modules-grid { grid-template-columns: 1fr; }
     .cta-phone { font-size: 1.1rem; padding: 16px 28px; }
   }
+
+/* ENHANCED AESTHETICS */
+.why-card, .seance-card, .info-strip {
+  background: rgba(11, 26, 64, 0.4) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.why-card:hover, .seance-card:hover {
+  background: rgba(0, 212, 170, 0.08) !important;
+  border-color: rgba(0, 212, 170, 0.4) !important;
+  box-shadow: 0 0 40px rgba(0, 212, 170, 0.2) !important;
+  transform: translateY(-6px) scale(1.01);
+}
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: all 0.6s ease-in-out;
+  z-index: -1;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+h1 .line2 {
+  background: linear-gradient(90deg, #00d4aa, #00f0c8, #f5c842, #00d4aa);
+  background-size: 200% auto;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.badge-top {
+  border: 1px solid rgba(245,200,66,0.6);
+  box-shadow: 0 0 15px rgba(245,200,66,0.2);
+  background: rgba(245,200,66,0.05);
+}
+
+.module-item {
+  background: rgba(5, 14, 43, 0.6) !important;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s;
+}
+
+.module-item:hover {
+  background: rgba(0, 212, 170, 0.05) !important;
+  border-color: rgba(0,212,170,0.3) !important;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  z-index: 9999;
+}
+
 </style>
 </head>
 <body>
@@ -802,7 +877,7 @@
     <span class="line3">Pour l'Entreprise</span>
   </h1>
   <p class="hero-sub">
-    Automatisez vos tâches, rédigez mieux, analysez vos données et prenez l'avance sur l'IA — en seulement 3 séances intensives et pratiques.
+    Automatisez vos tâches, rédigez mieux, analysez vos données et prenez l'avance sur l'IA - en seulement 3 séances intensives et pratiques.
   </p>
   <div class="hero-tags">
     <span class="hero-tag"><svg width="11" height="11"><use href="#ico-zap"/></svg> Automatisation</span>
@@ -872,7 +947,7 @@
   <div class="container">
     <div class="section-label">Pourquoi cette formation ?</div>
     <h2 class="section-title">Devenez plus efficace,<br>gagnez du temps, prenez de l'avance.</h2>
-    <p class="section-desc">L'IA n'est plus un luxe — c'est un outil quotidien. Ceux qui la maîtrisent travaillent deux fois plus vite, deux fois mieux.</p>
+    <p class="section-desc">L'IA n'est plus un luxe - c'est un outil quotidien. Ceux qui la maîtrisent travaillent deux fois plus vite, deux fois mieux.</p>
     <div class="why-grid">
       <div class="why-card">
         <div class="why-icon">
@@ -911,7 +986,7 @@
   <div class="container">
     <div class="section-label">Le programme</div>
     <h2 class="section-title">Un parcours en 3 séances progressives</h2>
-    <p class="section-desc">De la découverte à la maîtrise avancée — chaque séance construit sur la précédente pour une montée en compétences rapide.</p>
+    <p class="section-desc">De la découverte à la maîtrise avancée - chaque séance construit sur la précédente pour une montée en compétences rapide.</p>
 
     <div class="seances">
 
@@ -922,35 +997,35 @@
           <div class="seance-info">
             <div class="seance-badge">Séance 1 · Fondamentaux</div>
             <div class="seance-title">Comprendre &amp; prendre en main Claude IA</div>
-            <div class="seance-sub">Débutants &amp; initiés — Base solide pour bien démarrer</div>
+            <div class="seance-sub">Débutants &amp; initiés - Base solide pour bien démarrer</div>
           </div>
         </div>
         <div class="modules-grid">
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 1.1 — Qu'est-ce que l'IA générative ?</div>
+              <div class="module-name">Module 1.1 - Qu'est-ce que l'IA générative ?</div>
               <div class="module-desc">Comprendre comment fonctionne Claude, différences avec ChatGPT, Gemini. État actuel de l'IA en 2025-2026.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 1.2 — Prise en main de Claude</div>
+              <div class="module-name">Module 1.2 - Prise en main de Claude</div>
               <div class="module-desc">Interface claude.ai, créer un compte, les différents plans. Premiers prompts en contexte professionnel.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 1.3 — L'art du bon prompt</div>
+              <div class="module-name">Module 1.3 - L'art du bon prompt</div>
               <div class="module-desc">Techniques de prompting : contexte, rôle, format, exemples. Prompts pour la rédaction professionnelle, emails, comptes-rendus.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 1.4 — Veille IA : rester à jour</div>
+              <div class="module-name">Module 1.4 - Veille IA : rester à jour</div>
               <div class="module-desc">Comment suivre les nouveautés IA sans se perdre. Sources fiables, newsletters, outils de veille recommandés.</div>
             </div>
           </div>
@@ -964,35 +1039,35 @@
           <div class="seance-info">
             <div class="seance-badge">Séance 2 · Pratique intensive</div>
             <div class="seance-title">Automatiser les tâches et la production de contenus</div>
-            <div class="seance-sub">Cas concrets en entreprise — Applicable immédiatement</div>
+            <div class="seance-sub">Cas concrets en entreprise - Applicable immédiatement</div>
           </div>
         </div>
         <div class="modules-grid">
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 2.1 — Créer des présentations PowerPoint</div>
+              <div class="module-name">Module 2.1 - Créer des présentations PowerPoint</div>
               <div class="module-desc">Générer un plan de slides, rédiger le contenu, structurer les messages clés. Utiliser Claude + PowerPoint efficacement.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 2.2 — Rédiger des rapports professionnels</div>
+              <div class="module-name">Module 2.2 - Rédiger des rapports professionnels</div>
               <div class="module-desc">Rapports d'activité, synthèses exécutives, notes de service, comptes-rendus de réunion. Templates réutilisables.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 2.3 — Analyser des données avec Claude</div>
+              <div class="module-name">Module 2.3 - Analyser des données avec Claude</div>
               <div class="module-desc">Importer des tableaux, interpréter des chiffres, produire des synthèses chiffrées. Analyse de fichiers Excel/CSV.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 2.4 — Automatiser la communication écrite</div>
+              <div class="module-name">Module 2.4 - Automatiser la communication écrite</div>
               <div class="module-desc">Emails, propositions commerciales, appels d'offre, fiches produit. Adapter le ton selon l'interlocuteur.</div>
             </div>
           </div>
@@ -1006,35 +1081,35 @@
           <div class="seance-info">
             <div class="seance-badge">Séance 3 · Stratégie &amp; avenir</div>
             <div class="seance-title">Maîtriser l'IA et l'intégrer durablement</div>
-            <div class="seance-sub">Passer à l'échelle en entreprise — Vision long terme</div>
+            <div class="seance-sub">Passer à l'échelle en entreprise - Vision long terme</div>
           </div>
         </div>
         <div class="modules-grid">
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 3.1 — Workflows IA dans l'entreprise</div>
+              <div class="module-name">Module 3.1 - Workflows IA dans l'entreprise</div>
               <div class="module-desc">Identifier les tâches automatisables dans son poste, créer des processus répétables avec Claude. Gain de temps concret.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 3.2 — Bonnes pratiques &amp; limites de l'IA</div>
+              <div class="module-name">Module 3.2 - Bonnes pratiques &amp; limites de l'IA</div>
               <div class="module-desc">Vérification des contenus générés, confidentialité des données, risques à connaître. Utiliser l'IA de façon responsable.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 3.3 — Tendances IA &amp; stratégie d'entreprise</div>
+              <div class="module-name">Module 3.3 - Tendances IA &amp; stratégie d'entreprise</div>
               <div class="module-desc">IA agentique, automatisation avancée, outils complémentaires (Gemini, Copilot, Perplexity). Préparer son entreprise.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 3.4 — Plan d'action personnel</div>
+              <div class="module-name">Module 3.4 - Plan d'action personnel</div>
               <div class="module-desc">Chaque participant repart avec son plan d'intégration IA : 3 tâches à automatiser dès la semaine suivante.</div>
             </div>
           </div>
@@ -1123,14 +1198,14 @@
         <div class="formateur-avatar">LHO</div>
         <span class="cert-badge">
           <svg width="11" height="11" style="color:var(--navy)"><use href="#ico-star"/></svg>
-          Claude 101 — Anthropic
+          Claude 101 - Anthropic
         </span>
       </div>
       <div>
         <h2 class="formateur-name">Ludovic Hector OUEDRAOGO</h2>
         <span class="formateur-cred">
           <svg width="13" height="13"><use href="#ico-award"/></svg>
-          Certifié Claude 101 — Anthropic · Formateur IA
+          Certifié Claude 101 - Anthropic · Formateur IA
         </span>
         <p class="formateur-bio">
           Ludovic Hector OUEDRAOGO est l'un des rares formateurs certifiés Claude 101 par Anthropic en Afrique de l'Ouest. Passionné par l'impact concret de l'intelligence artificielle en entreprise, il accompagne dirigeants, cadres et équipes à intégrer les outils IA dans leurs pratiques quotidiennes.
@@ -1179,14 +1254,14 @@
       Maîtriser <span>Claude IA</span> pour l'Entreprise
     </div>
     <p class="footer-text">
-      Formation animée par Ludovic Hector OUEDRAOGO · Certifié Claude 101 — Anthropic<br>
+      Formation animée par Ludovic Hector OUEDRAOGO · Certifié Claude 101 - Anthropic<br>
       Cité Azimo de Tampouy, Ouagadougou, Burkina Faso
     </p>
     <div class="footer-contact">
       <svg><use href="#ico-phone"/></svg>
       +226 61 40 05 28
     </div>
-    <p class="footer-text" style="margin-top:1rem;">© 2026 — Formation Claude IA pour l'Entreprise. Tous droits réservés.</p>
+    <p class="footer-text" style="margin-top:1rem;">© 2026 - Formation Claude IA pour l'Entreprise. Tous droits réservés.</p>
   </div>
 </footer>
 
