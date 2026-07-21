@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maîtriser Claude IA pour l'Entreprise - Formation avec Ludovic Hector OUEDRAOGO</title>
-<meta name="description" content="Formation pratique Claude IA - 3 séances pour automatiser vos tâches, rédiger des rapports, analyser des données et maîtriser l'IA en entreprise. À Ouagadougou, Cité Azimo de Tampouy.">
+<title>Maîtriser Claude IA au quotidien - Formation avec Ludovic Hector OUEDRAOGO</title>
+<meta name="description" content="Formation pratique Claude IA - 3 séances pour analyser vos fichiers Excel, rédiger vos rapports, mémoires et documents Word, et gagner des heures chaque jour. À Ouagadougou, Cité Azimo de Tampouy. Lundi 27, Mercredi 29 et Vendredi 31 Juillet 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -510,6 +510,98 @@
 
   .cred-tag svg { width: 14px; height: 14px; flex-shrink: 0; }
 
+  .certs-banner {
+    margin-top: 3.5rem;
+    background: linear-gradient(135deg, rgba(245,200,66,0.08), rgba(0,212,170,0.06));
+    border: 1px solid rgba(245,200,66,0.25);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--glow-gold);
+  }
+
+  .certs-banner-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 0.5rem;
+  }
+
+  .certs-banner-badge {
+    flex-shrink: 0;
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    background: rgba(245,200,66,0.15);
+    border: 1px solid rgba(245,200,66,0.4);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .certs-banner-badge svg { width: 24px; height: 24px; color: var(--gold); }
+
+  .certs-banner-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    line-height: 1.2;
+  }
+  .certs-banner-title span { color: var(--gold); }
+
+  .certs-banner-sub {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .cert-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0.9rem 1rem;
+    background: rgba(5,14,43,0.5);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm);
+    transition: all 0.25s;
+  }
+
+  .cert-item:hover {
+    border-color: rgba(0,212,170,0.35);
+    transform: translateY(-2px);
+    background: rgba(0,212,170,0.05);
+  }
+
+  .cert-item-mark {
+    flex-shrink: 0;
+    width: 30px; height: 30px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    margin-top: 2px;
+  }
+
+  .cert-item-mark.anthropic { background: #1a1a1a; color: #fff; border: 1px solid #333; }
+  .cert-item-mark.openai { background: rgba(0,212,170,0.12); color: var(--teal); border: 1px solid rgba(0,212,170,0.3); }
+
+  .cert-item-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 0.86rem;
+    color: var(--white);
+    line-height: 1.35;
+  }
+  .cert-item-issuer {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    margin-top: 3px;
+  }
+
   .objectifs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -872,22 +964,22 @@ body::after {
 <section class="hero">
   <span class="badge-top">
     <svg width="12" height="12"><use href="#ico-star"/></svg>
-    Formation certifiante · Ouagadougou 2026
+    Formation certifiante · Ouagadougou · Juillet 2026
   </span>
   <h1>
     <span class="line1">Maîtriser</span>
     <span class="line2">Claude IA</span>
-    <span class="line3">Pour l'Entreprise</span>
+    <span class="line3">au quotidien</span>
   </h1>
   <p class="hero-sub">
-    Automatisez vos tâches, rédigez mieux, analysez vos données et prenez l'avance sur l'IA - en seulement 3 séances intensives et pratiques.
+    Analysez vos fichiers Excel, rédigez vos rapports, mémoires et documents Word, gérez vos emails et gagnez des heures chaque jour - en seulement 3 séances 100% pratiques.
   </p>
   <div class="hero-tags">
-    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-zap"/></svg> Automatisation</span>
-    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-cpu"/></svg> Rédaction professionnelle</span>
-    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-bar-chart"/></svg> Analyse de données</span>
-    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-target"/></svg> PowerPoint &amp; Rapports</span>
-    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-globe"/></svg> Veille IA</span>
+    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-bar-chart"/></svg> Analyser Excel</span>
+    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-cpu"/></svg> Rédiger Word &amp; rapports</span>
+    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-graduation"/></svg> Mémoires &amp; TFE</span>
+    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-target"/></svg> PowerPoint &amp; synthèses</span>
+    <span class="hero-tag"><svg width="11" height="11"><use href="#ico-zap"/></svg> Emails &amp; automatisation</span>
   </div>
   <div class="hero-actions">
     <a href="#inscription" class="btn-primary">
@@ -909,8 +1001,8 @@ body::after {
         <svg width="20" height="20" style="color:var(--gold)"><use href="#ico-calendar"/></svg>
       </div>
       <div>
-        <div class="info-label">Début</div>
-        <div class="info-value">22, 23 et 24 Juin 2026 à 17h</div>
+        <div class="info-label">Dates</div>
+        <div class="info-value">Lundi 27, Mercredi 29 &amp; Vendredi 31 Juillet 2026 à 17h</div>
       </div>
     </div>
     <div class="info-item">
@@ -949,36 +1041,36 @@ body::after {
 <section>
   <div class="container">
     <div class="section-label">Pourquoi cette formation ?</div>
-    <h2 class="section-title">Devenez plus efficace,<br>gagnez du temps, prenez de l'avance.</h2>
-    <p class="section-desc">L'IA n'est plus un luxe - c'est un outil quotidien. Ceux qui la maîtrisent travaillent deux fois plus vite, deux fois mieux.</p>
+    <h2 class="section-title">Vos tâches de tous les jours,<br>faites deux fois plus vite.</h2>
+    <p class="section-desc">Excel qui prend des heures, rapports à rédiger, mémoire à finir, emails qui s'accumulent… Claude fait tout cela avec vous. Cette formation vous montre exactement comment, sur vos vrais documents.</p>
     <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" style="color:var(--teal)"><use href="#ico-bar-chart"/></svg>
+        </div>
+        <div class="why-title">Vos fichiers Excel, décryptés</div>
+        <div class="why-desc">Importez un tableau, posez vos questions, obtenez des synthèses, des calculs et des graphiques expliqués en clair - sans formule compliquée.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" style="color:var(--teal)"><use href="#ico-cpu"/></svg>
+        </div>
+        <div class="why-title">Rédigez sans effort</div>
+        <div class="why-desc">Rapports, documents Word, comptes-rendus, courriers, mémoires et TFE : structurés, corrigés et mis en forme en quelques minutes.</div>
+      </div>
       <div class="why-card">
         <div class="why-icon">
           <svg width="22" height="22" style="color:var(--teal)"><use href="#ico-rocket"/></svg>
         </div>
-        <div class="why-title">Gagnez du temps</div>
-        <div class="why-desc">Automatisez les tâches répétitives et concentrez-vous sur ce qui compte vraiment dans votre entreprise.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">
-          <svg width="22" height="22" style="color:var(--teal)"><use href="#ico-trending-up"/></svg>
-        </div>
-        <div class="why-title">Boostez votre impact</div>
-        <div class="why-desc">Produisez des contenus professionnels plus rapidement et avec bien plus de qualité qu'auparavant.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">
-          <svg width="22" height="22" style="color:var(--teal)"><use href="#ico-shield"/></svg>
-        </div>
-        <div class="why-title">Prenez de l'avance</div>
-        <div class="why-desc">Maîtrisez les outils IA pour rester compétitif dans votre secteur face à une concurrence qui évolue vite.</div>
+        <div class="why-title">Gagnez des heures</div>
+        <div class="why-desc">Confiez à Claude les tâches répétitives - emails, résumés, relectures, traductions - et concentrez-vous sur l'essentiel.</div>
       </div>
       <div class="why-card">
         <div class="why-icon">
           <svg width="22" height="22" style="color:var(--teal)"><use href="#ico-target"/></svg>
         </div>
         <div class="why-title">100% applicable</div>
-        <div class="why-desc">Chaque module est conçu pour être appliqué immédiatement dans votre contexte professionnel réel.</div>
+        <div class="why-desc">On travaille sur vos propres documents. Vous repartez avec des méthodes utilisables dès le lendemain, à votre poste comme dans vos études.</div>
       </div>
     </div>
   </div>
@@ -989,7 +1081,7 @@ body::after {
   <div class="container">
     <div class="section-label">Le programme</div>
     <h2 class="section-title">Un parcours en 3 séances progressives</h2>
-    <p class="section-desc">De la découverte à la maîtrise avancée - chaque séance construit sur la précédente pour une montée en compétences rapide.</p>
+    <p class="section-desc">Trois demi-journées, du premier prompt jusqu'à vos documents finalisés. Chaque séance s'appuie sur vos propres fichiers pour une montée en compétences immédiate.</p>
 
     <div class="seances">
 
@@ -998,38 +1090,38 @@ body::after {
         <div class="seance-header">
           <div class="seance-num">01</div>
           <div class="seance-info">
-            <div class="seance-badge">Séance 1 · Fondamentaux</div>
-            <div class="seance-title">Comprendre &amp; prendre en main Claude IA</div>
-            <div class="seance-sub">Débutants &amp; initiés - Base solide pour bien démarrer</div>
+            <div class="seance-badge">Lundi 27 Juillet · Fondamentaux</div>
+            <div class="seance-title">Prendre en main Claude &amp; bien lui parler</div>
+            <div class="seance-sub">Débutants &amp; initiés - La base pour tout réussir ensuite</div>
           </div>
         </div>
         <div class="modules-grid">
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 1.1 - Qu'est-ce que l'IA générative ?</div>
-              <div class="module-desc">Comprendre comment fonctionne Claude, différences avec ChatGPT, Gemini. État actuel de l'IA en 2025-2026.</div>
+              <div class="module-name">Module 1.1 - Claude, c'est quoi au juste ?</div>
+              <div class="module-desc">Comprendre simplement l'IA générative, ce que Claude sait faire (et ne fait pas), différences avec ChatGPT et Gemini.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 1.2 - Prise en main de Claude</div>
-              <div class="module-desc">Interface claude.ai, créer un compte, les différents plans. Premiers prompts en contexte professionnel.</div>
+              <div class="module-name">Module 1.2 - Premiers pas sur claude.ai</div>
+              <div class="module-desc">Créer son compte, choisir son plan, découvrir l'interface, importer un fichier. Vos premières demandes en direct.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 1.3 - L'art du bon prompt</div>
-              <div class="module-desc">Techniques de prompting : contexte, rôle, format, exemples. Prompts pour la rédaction professionnelle, emails, comptes-rendus.</div>
+              <div class="module-name">Module 1.3 - L'art de bien demander</div>
+              <div class="module-desc">La méthode du bon prompt : contexte, rôle, format, exemples. Obtenir du premier coup ce que vous voulez vraiment.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 1.4 - Veille IA : rester à jour</div>
-              <div class="module-desc">Comment suivre les nouveautés IA sans se perdre. Sources fiables, newsletters, outils de veille recommandés.</div>
+              <div class="module-name">Module 1.4 - Vos premiers gains de temps</div>
+              <div class="module-desc">Résumer un texte, corriger et reformuler, traduire, répondre à un email. Des résultats concrets dès la première séance.</div>
             </div>
           </div>
         </div>
@@ -1040,38 +1132,38 @@ body::after {
         <div class="seance-header">
           <div class="seance-num">02</div>
           <div class="seance-info">
-            <div class="seance-badge">Séance 2 · Pratique intensive</div>
-            <div class="seance-title">Automatiser les tâches et la production de contenus</div>
-            <div class="seance-sub">Cas concrets en entreprise - Applicable immédiatement</div>
+            <div class="seance-badge">Mercredi 29 Juillet · Documents &amp; données</div>
+            <div class="seance-title">Excel, Word, rapports &amp; mémoires</div>
+            <div class="seance-sub">Le cœur de la formation - On travaille sur vos vrais fichiers</div>
           </div>
         </div>
         <div class="modules-grid">
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 2.1 - Créer des présentations PowerPoint</div>
-              <div class="module-desc">Générer un plan de slides, rédiger le contenu, structurer les messages clés. Utiliser Claude + PowerPoint efficacement.</div>
+              <div class="module-name">Module 2.1 - Analyser vos fichiers Excel &amp; CSV</div>
+              <div class="module-desc">Importer un tableau, poser vos questions, faire des calculs, repérer des tendances et produire des synthèses chiffrées - sans formule compliquée.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 2.2 - Rédiger des rapports professionnels</div>
-              <div class="module-desc">Rapports d'activité, synthèses exécutives, notes de service, comptes-rendus de réunion. Templates réutilisables.</div>
+              <div class="module-name">Module 2.2 - Rédiger rapports &amp; documents Word</div>
+              <div class="module-desc">Rapports d'activité, comptes-rendus de réunion, notes de service, courriers officiels. Structurer, rédiger et mettre en forme proprement.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 2.3 - Analyser des données avec Claude</div>
-              <div class="module-desc">Importer des tableaux, interpréter des chiffres, produire des synthèses chiffrées. Analyse de fichiers Excel/CSV.</div>
+              <div class="module-name">Module 2.3 - Mémoires, TFE &amp; documents longs</div>
+              <div class="module-desc">Construire un plan, rédiger et reformuler des chapitres, résumer des sources, améliorer le style et vérifier la cohérence de bout en bout.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 2.4 - Automatiser la communication écrite</div>
-              <div class="module-desc">Emails, propositions commerciales, appels d'offre, fiches produit. Adapter le ton selon l'interlocuteur.</div>
+              <div class="module-name">Module 2.4 - Emails, PowerPoint &amp; communication</div>
+              <div class="module-desc">Rédiger des emails clairs, préparer un plan de présentation PowerPoint, adapter le ton selon l'interlocuteur. Gagner du temps chaque jour.</div>
             </div>
           </div>
         </div>
@@ -1082,38 +1174,38 @@ body::after {
         <div class="seance-header">
           <div class="seance-num">03</div>
           <div class="seance-info">
-            <div class="seance-badge">Séance 3 · Stratégie &amp; avenir</div>
-            <div class="seance-title">Maîtriser l'IA et l'intégrer durablement</div>
-            <div class="seance-sub">Passer à l'échelle en entreprise - Vision long terme</div>
+            <div class="seance-badge">Vendredi 31 Juillet · Autonomie</div>
+            <div class="seance-title">En faire une habitude, en toute confiance</div>
+            <div class="seance-sub">Intégrer Claude durablement dans votre travail et vos études</div>
           </div>
         </div>
         <div class="modules-grid">
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 3.1 - Workflows IA dans l'entreprise</div>
-              <div class="module-desc">Identifier les tâches automatisables dans son poste, créer des processus répétables avec Claude. Gain de temps concret.</div>
+              <div class="module-name">Module 3.1 - Vos routines qui gagnent du temps</div>
+              <div class="module-desc">Repérer les tâches qui reviennent chaque semaine et créer des méthodes réutilisables avec Claude. Vos modèles prêts à l'emploi.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 3.2 - Bonnes pratiques &amp; limites de l'IA</div>
-              <div class="module-desc">Vérification des contenus générés, confidentialité des données, risques à connaître. Utiliser l'IA de façon responsable.</div>
+              <div class="module-name">Module 3.2 - Vérifier, corriger, garder la main</div>
+              <div class="module-desc">Repérer une erreur, recouper une information, protéger vos données confidentielles. Utiliser l'IA de façon fiable et responsable.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 3.3 - Tendances IA &amp; stratégie d'entreprise</div>
-              <div class="module-desc">IA agentique, automatisation avancée, outils complémentaires (Gemini, Copilot, Perplexity). Préparer son entreprise.</div>
+              <div class="module-name">Module 3.3 - Aller plus loin</div>
+              <div class="module-desc">Les Projets et l'analyse de documents, un aperçu des autres outils utiles (Gemini, Copilot, Perplexity) et comment suivre les nouveautés.</div>
             </div>
           </div>
           <div class="module-item">
             <div class="module-dot"></div>
             <div>
-              <div class="module-name">Module 3.4 - Plan d'action personnel</div>
-              <div class="module-desc">Chaque participant repart avec son plan d'intégration IA : 3 tâches à automatiser dès la semaine suivante.</div>
+              <div class="module-name">Module 3.4 - Votre plan d'action personnel</div>
+              <div class="module-desc">Chacun repart avec 3 tâches concrètes à confier à Claude dès la semaine suivante, adaptées à son métier ou à ses études.</div>
             </div>
           </div>
         </div>
@@ -1131,27 +1223,27 @@ body::after {
     <div class="objectifs-grid">
       <div class="obj-item">
         <div class="obj-check"><svg style="color:var(--teal)"><use href="#ico-check"/></svg></div>
-        <div class="obj-text">Créer une présentation PowerPoint professionnelle en quelques minutes avec Claude</div>
+        <div class="obj-text">Analyser un fichier Excel ou CSV et en tirer des synthèses claires, sans formule compliquée</div>
       </div>
       <div class="obj-item">
         <div class="obj-check"><svg style="color:var(--teal)"><use href="#ico-check"/></svg></div>
-        <div class="obj-text">Rédiger des rapports, emails et comptes-rendus de qualité supérieure sans effort</div>
+        <div class="obj-text">Rédiger rapports, documents Word, comptes-rendus et courriers de qualité supérieure sans effort</div>
       </div>
       <div class="obj-item">
         <div class="obj-check"><svg style="color:var(--teal)"><use href="#ico-check"/></svg></div>
-        <div class="obj-text">Analyser des fichiers Excel et CSV pour en extraire des synthèses claires</div>
+        <div class="obj-text">Structurer et rédiger un mémoire ou un TFE : plan, chapitres, reformulation et relecture</div>
       </div>
       <div class="obj-item">
         <div class="obj-check"><svg style="color:var(--teal)"><use href="#ico-check"/></svg></div>
-        <div class="obj-text">Formuler des prompts efficaces adaptés à votre métier et secteur d'activité</div>
+        <div class="obj-text">Gérer vos emails et préparer vos présentations PowerPoint en quelques minutes</div>
       </div>
       <div class="obj-item">
         <div class="obj-check"><svg style="color:var(--teal)"><use href="#ico-check"/></svg></div>
-        <div class="obj-text">Identifier et automatiser les 3 tâches qui vous font perdre le plus de temps</div>
+        <div class="obj-text">Formuler des demandes efficaces adaptées à votre métier, vos études ou votre secteur</div>
       </div>
       <div class="obj-item">
         <div class="obj-check"><svg style="color:var(--teal)"><use href="#ico-check"/></svg></div>
-        <div class="obj-text">Rester informé des évolutions IA pour ne jamais prendre de retard</div>
+        <div class="obj-text">Identifier les 3 tâches qui vous font perdre le plus de temps - et les confier à Claude</div>
       </div>
     </div>
   </div>
@@ -1176,19 +1268,19 @@ body::after {
         <div class="public-label">Assistants &amp; Secrétaires</div>
       </div>
       <div class="public-card">
+        <div class="public-icon"><svg style="color:var(--gold)"><use href="#ico-graduation"/></svg></div>
+        <div class="public-label">Étudiants &amp; Mémorants</div>
+      </div>
+      <div class="public-card">
         <div class="public-icon"><svg style="color:var(--gold)"><use href="#ico-bar-chart"/></svg></div>
         <div class="public-label">Analystes &amp; Chargés d'études</div>
       </div>
       <div class="public-card">
-        <div class="public-icon"><svg style="color:var(--gold)"><use href="#ico-target"/></svg></div>
-        <div class="public-label">Commerciaux &amp; Marketeurs</div>
-      </div>
-      <div class="public-card">
         <div class="public-icon"><svg style="color:var(--gold)"><use href="#ico-users"/></svg></div>
-        <div class="public-label">Toute personne en entreprise</div>
+        <div class="public-label">Toute personne qui rédige au quotidien</div>
       </div>
     </div>
-    <p style="text-align:center; color: var(--text-muted); font-size: 0.9rem; margin-top: 1.5rem;">Aucune connaissance préalable en informatique ou en IA n'est requise.</p>
+    <p style="text-align:center; color: var(--text-muted); font-size: 0.9rem; margin-top: 1.5rem;">Aucune connaissance préalable en informatique ou en IA n'est requise - on part de zéro.</p>
   </div>
 </section>
 
@@ -1200,32 +1292,87 @@ body::after {
       <div class="formateur-photo">
         <div class="formateur-avatar">LHO</div>
         <span class="cert-badge">
-          <svg width="11" height="11" style="color:var(--navy)"><use href="#ico-star"/></svg>
-          Claude 101 - Anthropic
+          <svg width="11" height="11" style="color:var(--navy)"><use href="#ico-award"/></svg>
+          6 certifications IA
         </span>
       </div>
       <div>
         <h2 class="formateur-name">Ludovic Hector OUEDRAOGO</h2>
         <span class="formateur-cred">
           <svg width="13" height="13"><use href="#ico-award"/></svg>
-          Certifié Claude 101 - Anthropic · Formateur IA
+          Certifié Anthropic &amp; OpenAI · Formateur IA
         </span>
         <p class="formateur-bio">
-          Ludovic Hector OUEDRAOGO est l'un des rares formateurs certifiés Claude 101 par Anthropic en Afrique de l'Ouest. Passionné par l'impact concret de l'intelligence artificielle en entreprise, il accompagne dirigeants, cadres et équipes à intégrer les outils IA dans leurs pratiques quotidiennes.
+          Ludovic Hector OUEDRAOGO fait partie des <strong style="color: var(--gold);">très rares formateurs en Afrique de l'Ouest à détenir l'ensemble des certifications IA d'Anthropic et d'OpenAI</strong> - de Claude 101 au AI Fluency Framework, en passant par les parcours Agents et Foundations. Une expertise complète, au service de votre quotidien.
         </p>
         <p class="formateur-bio">
-          Sa pédagogie est résolument <strong style="color: var(--teal);">pratique</strong> : pas de théorie inutile, des exercices réels tirés du contexte professionnel burkinabè et africain. Vous repartez avec des compétences applicables dès le lendemain.
+          Sa pédagogie est résolument <strong style="color: var(--teal);">pratique</strong> : pas de théorie inutile, on travaille sur vos propres fichiers Excel, rapports, mémoires et emails. Vous repartez avec des méthodes applicables dès le lendemain, au bureau comme dans vos études.
         </p>
         <div class="cred-tags">
           <span class="cred-tag" style="color:var(--gold); background:rgba(245,200,66,0.1); border:1px solid rgba(245,200,66,0.2);">
-            <svg><use href="#ico-award"/></svg> Certifié Anthropic
+            <svg><use href="#ico-award"/></svg> Toutes les certifications Anthropic
           </span>
           <span class="cred-tag" style="color:var(--teal); background:rgba(0,212,170,0.1); border:1px solid rgba(0,212,170,0.2);">
-            <svg><use href="#ico-graduation"/></svg> Formateur IA
+            <svg><use href="#ico-graduation"/></svg> Certifié OpenAI
           </span>
           <span class="cred-tag" style="color:var(--text-muted); background:var(--card-bg); border:1px solid var(--card-border);">
             <svg><use href="#ico-map-pin"/></svg> Ouagadougou
           </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="certs-banner">
+      <div class="certs-banner-head">
+        <div class="certs-banner-badge">
+          <svg><use href="#ico-shield"/></svg>
+        </div>
+        <div class="certs-banner-title">Un profil rare : <span>les 6 certifications IA d'Anthropic &amp; OpenAI</span></div>
+      </div>
+      <p class="certs-banner-sub">Là où la plupart des formateurs affichent une attestation, Ludovic Hector les cumule toutes. Une garantie de sérieux et de maîtrise pour votre formation.</p>
+      <div class="certs-grid">
+        <div class="cert-item">
+          <div class="cert-item-mark anthropic">A\</div>
+          <div>
+            <div class="cert-item-name">Teaching the AI Fluency Framework</div>
+            <div class="cert-item-issuer">Anthropic · 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-item-mark anthropic">A\</div>
+          <div>
+            <div class="cert-item-name">AI Fluency Framework &amp; Foundations</div>
+            <div class="cert-item-issuer">Anthropic · 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-item-mark anthropic">A\</div>
+          <div>
+            <div class="cert-item-name">Claude 101</div>
+            <div class="cert-item-issuer">Anthropic · 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-item-mark openai">AI</div>
+          <div>
+            <div class="cert-item-name">Agents and Workflows</div>
+            <div class="cert-item-issuer">OpenAI · 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-item-mark openai">AI</div>
+          <div>
+            <div class="cert-item-name">Applied AI Foundations</div>
+            <div class="cert-item-issuer">OpenAI · 2026</div>
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-item-mark openai">AI</div>
+          <div>
+            <div class="cert-item-name">AI Foundations</div>
+            <div class="cert-item-issuer">OpenAI · 2026</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1238,7 +1385,7 @@ body::after {
     <div class="section-label" style="color: var(--teal);">Réservez votre place</div>
     <h2 class="cta-title">Prêt à transformer<br><span>votre façon de travailler</span> ?</h2>
     <p class="cta-desc">
-      Les places sont limitées. Inscrivez-vous dès maintenant pour garantir votre participation à la formation des 22, 23 et 24 Juin 2026 à 17h.
+      Les places sont limitées. Inscrivez-vous dès maintenant pour garantir votre participation aux 3 séances : <strong style="color:var(--white);">Lundi 27, Mercredi 29 et Vendredi 31 Juillet 2026 à 17h</strong>.
     </p>
     <a href="https://wa.me/22661400528" target="_blank" rel="noopener noreferrer" class="cta-phone">
       <svg><use href="#ico-whatsapp"/></svg>
@@ -1254,17 +1401,17 @@ body::after {
   <div class="footer-inner">
     <div class="footer-logo">
       <svg width="16" height="16" style="color:var(--teal)"><use href="#ico-cpu"/></svg>
-      Maîtriser <span>Claude IA</span> pour l'Entreprise
+      Maîtriser <span>Claude IA</span> au quotidien
     </div>
     <p class="footer-text">
-      Formation animée par Ludovic Hector OUEDRAOGO · Certifié Claude 101 - Anthropic<br>
+      Formation animée par Ludovic Hector OUEDRAOGO · Certifié Anthropic &amp; OpenAI (6 certifications IA)<br>
       Cité Azimo de Tampouy, Ouagadougou, Burkina Faso
     </p>
     <div class="footer-contact">
       <svg><use href="#ico-phone"/></svg>
       +226 61 40 05 28
     </div>
-    <p class="footer-text" style="margin-top:1rem;">© 2026 - Formation Claude IA pour l'Entreprise. Tous droits réservés.</p>
+    <p class="footer-text" style="margin-top:1rem;">© 2026 - Formation Claude IA au quotidien. Tous droits réservés.</p>
   </div>
 </footer>
 
@@ -1278,7 +1425,7 @@ body::after {
     });
   }, { threshold: 0.12 });
 
-  document.querySelectorAll('.why-card, .seance-card, .obj-item, .public-card, .module-item').forEach(el => {
+  document.querySelectorAll('.why-card, .seance-card, .obj-item, .public-card, .module-item, .cert-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
